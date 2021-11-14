@@ -1,0 +1,15 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+library(tidyverse)
+library(janitor)
+
+R_trial_10_13_21 %>% 
+select (contains (Ability))
+
