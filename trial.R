@@ -28,8 +28,14 @@ mutate(ability_implement = str_remove(ability_implement, "- Low")) %>%
   mutate(ability_interpret = str_remove(ability_interpret, "- Low")) %>% 
   mutate(ability_use_results = str_remove(ability_use_results, "- Low")) %>% 
   mutate(ability_ctl = str_remove(ability_ctl, "- Low")) %>% 
-  drop_na(ability_implement) %>% 
-  mutate
+  drop_na(ability_implement)
+
+remove_characters <- function(data_set, variable, variable_2, characters_removed) {
+  data(data_set)
+  mutate(variable = str_remove(variable_2, characters_removed))
+}
+
+remove_characters(R_trial_10_13_21,Going_well_design)
 
 #Original graph code
 
